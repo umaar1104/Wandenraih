@@ -2,7 +2,7 @@ body{
     margin: 0;
     min-height: 100vh;
     position: relative;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/download.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../public/download.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
