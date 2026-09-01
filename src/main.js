@@ -1,8 +1,8 @@
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
-
-
+import loadingImg from './assets/circle-notch-solid.png';
+document.querySelector("#app").innerHTML = `<img src="${loadingImg}" alt="Loading..." class="loading-gif" id="loading-gif" />`;
 function fetchNasaData(isRandom = false) {
-    document.querySelector("#app").innerHTML = '<img src="public/circle-notch-solid.png" alt="Loading..." class="loading-gif" id="loading-gif"/>';
+    document.querySelector("#app").innerHTML = `<img src="${loadingImg}" alt="Loading..." class="loading-gif" id="loading-gif" />`;
     let url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
     if (isRandom) {
         url += `&count=1`;
