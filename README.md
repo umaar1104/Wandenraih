@@ -3,11 +3,9 @@
 ## Capabilities
 1. Give a random text, video and images as an information from NASA.
 2. Refresh button helps you change insights.
-3. Show you time by your timezone.
 ## Challanges
-1. Setting up clock.
+1. Fetching data from NASA
 2. **Create a refresh button**
-3. Fetching data from NASA
 ## Technologies and langueages
 1. HTML
 2. JS
