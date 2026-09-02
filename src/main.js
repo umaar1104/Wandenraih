@@ -38,31 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         randomBtn.addEventListener('click', () => fetchNasaData(true));
     }
 });
-function updateClock() {
-  const now = new Date();
 
-  // 1. Vaqtni foydalanuvchining vaqt mintaqasi (timezone) bo'yicha olish
-  const timeOptions = { 
-    timeZone: 'Asia/Tashkent', // O'zingizning mintaqangizni yozishingiz mumkin (masalan: 'UTC', 'America/New_York')
-    hour: '2-digit', 
-    minute: '2-digit', 
-    second: '2-digit',
-    hour12: true 
-  };
-  const timeString = now.toLocaleTimeString('en-US', timeOptions);
-  document.getElementById('live-time').innerText = timeString;
-
-  // 2. Sanani chiroyli formatda chiqarish
-  const dateOptions = { 
-    timeZone: 'Asia/Tashkent', 
-    weekday: 'long', 
-    month: 'long', 
-    day: 'numeric' 
-  };
-  const dateString = now.toLocaleDateString('en-US', dateOptions);
-  document.getElementById('live-date').innerText = dateString;
-}
-setInterval(updateClock, 1000);
-updateClock(); 
 
  
