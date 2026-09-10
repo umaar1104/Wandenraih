@@ -4,13 +4,18 @@ document.querySelector("#app").innerHTML = `<img src ="${LoadingImg}" alt="Loadi
 function fetchNasaData(isRandom = false) { 
     document.querySelector("#app").innerHTML = `<img src ="${LoadingImg}" alt="Loading..." class="loading-gif" id="loading-gif" />`;
     let url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
-    if (isRandom){
+    if (isRandom = true){
         url += '&count=1';
     }
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            let currentData = isRandom ? data[0] : data;
+            let currentData;
+               if (isRandom === true) {
+                currentData = data[0];
+            } else {
+                currentData = data;
+            }
             let media;
             if (currentData.media_type === "image") {
                 media = `<img src="${currentData.url}" alt="${currentData.title}"/>`;
@@ -30,9 +35,7 @@ function fetchNasaData(isRandom = false) {
         });
 }
 fetchNasaData(false);
-document.addEventListener('DOMContentLoaded', () => {
-    const randomBtn = document.getElementById('random-btn');
-    if (randomBtn) {
-        randomBtn.addEventListener('click', () => fetchNasaData(true));
-    }
+const btn = document.getElementById("random-btn");
+btn.addEventListener("click", function() {
+    fetchNasaData(true);
 });

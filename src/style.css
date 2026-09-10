@@ -84,3 +84,8 @@ img, video, iframe{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+@media (min-width: 600px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
