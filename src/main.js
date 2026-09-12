@@ -35,7 +35,7 @@ function fetchNasaData(isRandom = false) {
         });
 }
 fetchNasaData(false);
-const btn = document.getElementById("random-btn");
+const btn = document.getElementById("btn");
 btn.addEventListener("click", function() {
     fetchNasaData(true);
 });
