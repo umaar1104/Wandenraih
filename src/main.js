@@ -1,5 +1,14 @@
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 import LoadingImg from './assets/circle-notch-solid.png';
+let date = new Date();
+let kun = String(date.getDate()).padStart(2, '0');
+let month = String(date.getMonth() + 1).padStart(2, '0');
+let year =date.getFullYear();
+const formDate = `${kun}.${month}.${year}`;
+let date2 = new Date();
+let hour = date2.getHours();
+let min = date2.getMinutes();
+document.querySelector("#date").innerHTML = `<p style="font-size: 3rem;">${formDate} <br>${hour}:${min}</p>`;
 document.querySelector("#app").innerHTML = `<img src ="${LoadingImg}" alt="Loading..." class="loading-gif" id="loading-gif" />`;
 function fetchNasaData(isRandom = false) { 
     document.querySelector("#app").innerHTML = `<img src ="${LoadingImg}" alt="Loading..." class="loading-gif" id="loading-gif" />`;
